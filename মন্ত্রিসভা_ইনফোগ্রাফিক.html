@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ত্রয়োদশ জাতীয় সংসদ — নতুন মন্ত্রিসভা ২০২৬</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;600;700;800&family=Exo+2:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00A86B;
+    --red: #DC1F2A;
+    --gold: #F5A623;
+    --dark: #0D1B2A;
+    --navy: #1A3A5C;
+    --teal: #0097A7;
+    --purple: #7B2D8B;
+    --orange: #E65100;
+    --pink: #C2185B;
+    --lime: #558B2F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #f0f4f8;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    color: #1a1a2e;
+  }
+
+  .page {
+    width: 1200px;
+    margin: 0 auto;
+    background: white;
+  }
+
+  /* ===== HERO HEADER ===== */
+  .hero {
+    background: linear-gradient(135deg, #0D1B2A 0%, #1A3A5C 40%, #0D1B2A 100%);
+    padding: 50px 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(0,168,107,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(220,31,42,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .flag-stripe {
+    display: flex;
+    gap: 0;
+    margin-bottom: 28px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 80px;
+    height: 8px;
+  }
+  .fs-green { background: var(--green); width: 50%; }
+  .fs-red { background: var(--red); width: 50%; }
+  .hero-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 30px;
+    position: relative; z-index: 1;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    position: relative; z-index: 1;
+  }
+  .hero-meta-item {
+    text-align: center;
+  }
+  .hero-meta-num {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .hero-meta-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .m1 .hero-meta-num { color: var(--gold); }
+  .m2 .hero-meta-num { color: #4FC3F7; }
+  .m3 .hero-meta-num { color: #81C784; }
+  .m4 .hero-meta-num { color: #F48FB1; }
+
+  /* ===== ELECTION RESULT BAR ===== */
+  .election-section {
+    background: linear-gradient(to right, #0D1B2A, #1e3a5f);
+    padding: 28px 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  .result-label {
+    color: rgba(255,255,255,0.5);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .result-bar-wrap { flex: 1; }
+  .result-bar {
+    height: 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .rb-bnp { background: var(--green); flex: 212; display: flex; align-items: center; padding-left: 14px; }
+  .rb-jamat { background: #B71C1C; flex: 77; display: flex; align-items: center; justify-content: center; }
+  .rb-other { background: #37474F; flex: 10; border-radius: 0 6px 6px 0; }
+  .rb-label { font-size: 12px; font-weight: 700; color: white; }
+  .result-legend { display: flex; gap: 24px; }
+  .rl-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.7); }
+  .rl-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  /* ===== SECTIONS ===== */
+  .section { padding: 48px 60px; }
+  .section-alt { background: #f7fafd; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  .section-heading {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 32px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+  }
+
+  /* ===== PRIME MINISTER CARD ===== */
+  .pm-card {
+    background: linear-gradient(135deg, #0D1B2A 0%, #1e3a5f 100%);
+    border-radius: 16px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(13,27,42,0.25);
+  }
+  .pm-card::after {
+    content: 'প্র.ম.';
+    position: absolute;
+    right: 30px;
+    bottom: -20px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+  }
+  .pm-avatar {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), #e67e00);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px; font-weight: 800; color: white;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(245,166,35,0.3);
+  }
+  .pm-info { flex: 1; }
+  .pm-role { font-size: 11px; letter-spacing: 3px; color: var(--gold); font-weight: 700; margin-bottom: 6px; }
+  .pm-name { font-size: 30px; font-weight: 800; color: white; margin-bottom: 8px; }
+  .pm-details { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 14px; }
+  .pm-detail { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 16px; }
+  .pm-detail-label { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-bottom: 2px; }
+  .pm-detail-val { font-size: 14px; font-weight: 600; color: white; }
+  .pm-ministries { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .pm-ministry-tag {
+    background: rgba(245,166,35,0.15);
+    border: 1px solid rgba(245,166,35,0.3);
+    color: var(--gold);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ===== MINISTER GRID ===== */
+  .ministers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  .minister-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: white;
+    border: 1px solid #e8eef5;
+  }
+  .minister-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+  .mc-header {
+    padding: 14px 16px 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .mc-num {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: white;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px; font-weight: 800;
+    flex-shrink: 0;
+  }
+  .mc-name-wrap { flex: 1; }
+  .mc-name { font-size: 14px; font-weight: 700; color: white; line-height: 1.3; }
+  .mc-post { font-size: 10px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+  .mc-body { padding: 12px 16px; }
+  .mc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f4f8;
+    font-size: 12px;
+  }
+  .mc-row:last-child { border-bottom: none; }
+  .mc-row-label { color: #7f8c8d; font-size: 11px; }
+  .mc-row-val { font-weight: 600; color: #2c3e50; text-align: right; max-width: 160px; }
+  .mc-votes {
+    margin-top: 10px;
+    background: #f7fafd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .mc-votes-num {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+  .mc-votes-label { font-size: 10px; color: #7f8c8d; margin-top: 2px; }
+
+  /* COLOR THEMES */
+  .c0 .mc-header { background: linear-gradient(135deg, #00695C, #00897B); }
+  .c0 .mc-num { color: #00695C; }
+  .c0 .mc-votes-num { color: #00695C; }
+  .c1 .mc-header { background: linear-gradient(135deg, #1565C0, #1976D2); }
+  .c1 .mc-num { color: #1565C0; }
+  .c1 .mc-votes-num { color: #1565C0; }
+  .c2 .mc-header { background: linear-gradient(135deg, #6A1B9A, #8E24AA); }
+  .c2 .mc-num { color: #6A1B9A; }
+  .c2 .mc-votes-num { color: #6A1B9A; }
+  .c3 .mc-header { background: linear-gradient(135deg, #C62828, #E53935); }
+  .c3 .mc-num { color: #C62828; }
+  .c3 .mc-votes-num { color: #C62828; }
+  .c4 .mc-header { background: linear-gradient(135deg, #E65100, #F57C00); }
+  .c4 .mc-num { color: #E65100; }
+  .c4 .mc-votes-num { color: #E65100; }
+  .c5 .mc-header { background: linear-gradient(135deg, #00695C, #26A69A); }
+  .c5 .mc-num { color: #00695C; }
+  .c5 .mc-votes-num { color: #00695C; }
+  .c6 .mc-header { background: linear-gradient(135deg, #1B5E20, #388E3C); }
+  .c6 .mc-num { color: #1B5E20; }
+  .c6 .mc-votes-num { color: #1B5E20; }
+  .c7 .mc-header { background: linear-gradient(135deg, #880E4F, #C2185B); }
+  .c7 .mc-num { color: #880E4F; }
+  .c7 .mc-votes-num { color: #880E4F; }
+  .c8 .mc-header { background: linear-gradient(135deg, #4527A0, #5E35B1); }
+  .c8 .mc-num { color: #4527A0; }
+  .c8 .mc-votes-num { color: #4527A0; }
+  .c9 .mc-header { background: linear-gradient(135deg, #004D40, #00796B); }
+  .c9 .mc-num { color: #004D40; }
+  .c9 .mc-votes-num { color: #004D40; }
+  .state-card .mc-header { opacity: 0.92; }
+
+  /* TECHNOCRAT badge */
+  .tech-badge {
+    background: linear-gradient(135deg, #F9A825, #F57F17);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  .coalition-badge {
+    background: linear-gradient(135deg, #0097A7, #006064);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  /* ===== AGE CHART ===== */
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 10px;
+  }
+  .chart-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    border: 1px solid #e8eef5;
+  }
+  .chart-title { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 18px; }
+  .age-group {
+    display: flex; align-items: center;
+    gap: 10px; margin-bottom: 10px;
+  }
+  .age-label { width: 70px; font-size: 11px; color: #666; flex-shrink: 0; }
+  .age-bar-wrap { flex: 1; height: 20px; background: #eee; border-radius: 4px; overflow: hidden; }
+  .age-bar { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 11px; font-weight: 700; color: white; }
+  .age-count { width: 30px; font-size: 12px; font-weight: 700; color: var(--dark); }
+
+  .donut-wrap { position: relative; display: flex; justify-content: center; align-items: center; }
+  .donut-label { position: absolute; text-align: center; }
+  .donut-num { font-family: 'Exo 2', sans-serif; font-size: 28px; font-weight: 900; color: var(--dark); }
+  .donut-sub { font-size: 10px; color: #999; }
+
+  .pie-legend { margin-top: 16px; }
+  .pie-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 12px; }
+  .pie-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  /* district map simple */
+  .district-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .district-tag {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* ===== VOTE HIGHLIGHT ===== */
+  .vote-champions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+  }
+  .vote-champ {
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .vote-champ::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+  }
+  .vc-rank {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 11px; font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  .vc-num {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 26px; font-weight: 900;
+    color: white; line-height: 1;
+    margin-bottom: 6px;
+  }
+  .vc-name { font-size: 12px; font-weight: 700; color: white; margin-bottom: 3px; }
+  .vc-seat { font-size: 10px; opacity: 0.75; color: white; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--dark);
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left { color: rgba(255,255,255,0.5); font-size: 11px; }
+  .footer-right { display: flex; gap: 8px; }
+  .footer-tag {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .ft-green { background: var(--green); color: white; }
+  .ft-red { background: var(--red); color: white; }
+  .ft-gold { background: var(--gold); color: #333; }
+
+  .divider {
+    height: 4px;
+    background: linear-gradient(to right, var(--green), var(--gold), var(--red));
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="flag-stripe"><div class="fs-green"></div><div class="fs-red"></div></div>
+    <div class="hero-title">People's Republic of Bangladesh</div>
+    <h1>ত্রয়োদশ জাতীয় সংসদ <span>নতুন মন্ত্রিসভা</span></h1>
+    <p class="hero-sub">শপথ গ্রহণ ১৭ ফেব্রুয়ারি ২০২৬ · জাতীয় সংসদ ভবন, দক্ষিণ প্লাজা</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item m1">
+        <div class="hero-meta-num">৪৯</div>
+        <div class="hero-meta-label">মন্ত্রিসভা সদস্য</div>
+      </div>
+      <div class="hero-meta-item m2">
+        <div class="hero-meta-num">২৫</div>
+        <div class="hero-meta-label">পূর্ণমন্ত্রী</div>
+      </div>
+      <div class="hero-meta-item m3">
+        <div class="hero-meta-num">২৪</div>
+        <div class="hero-meta-label">প্রতিমন্ত্রী</div>
+      </div>
+      <div class="hero-meta-item m4">
+        <div class="hero-meta-num">২৯৯</div>
+        <div class="hero-meta-label">মোট আসন</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELECTION RESULT BAR -->
+  <div class="election-section">
+    <div style="min-width: 140px;">
+      <div class="result-label">নির্বাচন ১২ ফেব্রুয়ারি</div>
+      <div style="color: white; font-size: 18px; font-weight: 800;">আসন বণ্টন</div>
+    </div>
+    <div class="result-bar-wrap">
+      <div class="result-bar">
+        <div class="rb-bnp"><span class="rb-label">বিএনপি জোট — ২১২</span></div>
+        <div class="rb-jamat"><span class="rb-label">জামায়াত জোট — ৭৭</span></div>
+        <div class="rb-other"></div>
+      </div>
+      <div class="result-legend">
+        <div class="rl-item"><div class="rl-dot" style="background:var(--green)"></div> বিএনপি ও জোট: ২১২ আসন</div>
+        <div class="rl-item"><div class="rl-dot" style="background:#B71C1C"></div> জামায়াত ও জোট: ৭৭ আসন</div>
+        <div class="rl-item"><div class="rl-dot" style="background:#37474F"></div> অন্যান্য: ১০ আসন</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <!-- PM SECTION -->
+  <div class="section">
+    <div class="section-title">সরকার প্রধান</div>
+    <div class="section-heading">প্রধানমন্ত্রী</div>
+    <div class="pm-card">
+      <div class="pm-avatar">ত.র.</div>
+      <div class="pm-info">
+        <div class="pm-role">প্রধানমন্ত্রী · ত্রয়োদশ জাতীয় সংসদ</div>
+        <div class="pm-name">তারেক রহমান</div>
+        <div style="color: rgba(255,255,255,0.6); font-size: 13px;">বিএনপি চেয়ারম্যান</div>
+        <div class="pm-details">
+          <div class="pm-detail"><div class="pm-detail-label">জন্ম</div><div class="pm-detail-val">২০ নভেম্বর ১৯৬৭</div></div>
+          <div class="pm-detail"><div class="pm-detail-label">জেলা</div><div class="pm-detail-val">বগুড়া / ফেনী</div></div>
+          <div class="pm-detail"><div class="pm-detail-label">বয়স</div><div class="pm-detail-val">৫৮ বছর</div></div>
+          <div class="pm-detail"><div class="pm-detail-label">আসন</div><div class="pm-detail-val">ঢাকা-১৭</div></div>
+        </div>
+        <div class="pm-ministries">
+          <span class="pm-ministry-tag">প্রধানমন্ত্রীর কার্যালয়</span>
+          <span class="pm-ministry-tag">মন্ত্রিপরিষদ বিভাগ</span>
+          <span class="pm-ministry-tag">সশস্ত্র বাহিনী বিভাগ</span>
+          <span class="pm-ministry-tag">প্রতিরক্ষা মন্ত্রণালয়</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="charts-row">
+      <!-- AGE DISTRIBUTION -->
+      <div class="chart-card">
+        <div class="chart-title">🎂 বয়সের বিভাজন</div>
+        <div class="age-group">
+          <div class="age-label">৮০+ বছর</div>
+          <div class="age-bar-wrap"><div class="age-bar" style="width:8%;background:#E53935;">১</div></div>
+          <div class="age-count">১</div>
+        </div>
+        <div class="age-group">
+          <div class="age-label">৭০-৭৯ বছর</div>
+          <div class="age-bar-wrap"><div class="age-bar" style="width:48%;background:#F57C00;">৭</div></div>
+          <div class="age-count">৭</div>
+        </div>
+        <div class="age-group">
+          <div class="age-label">৬০-৬৯ বছর</div>
+          <div class="age-bar-wrap"><div class="age-bar" style="width:56%;background:#388E3C;">৮</div></div>
+          <div class="age-count">৮</div>
+        </div>
+        <div class="age-group">
+          <div class="age-label">৫০-৫৯ বছর</div>
+          <div class="age-bar-wrap"><div class="age-bar" style="width:80%;background:#1976D2;">১১</div></div>
+          <div class="age-count">১১</div>
+        </div>
+        <div class="age-group">
+          <div class="age-label">৪০-৪৯ বছর</div>
+          <div class="age-bar-wrap"><div class="age-bar" style="width:56%;background:#7B1FA2;">৮</div></div>
+          <div class="age-count">৮</div>
+        </div>
+        <div class="age-group">
+          <div class="age-label">৩০-৩৯ বছর</div>
+          <div class="age-bar-wrap"><div class="age-bar" style="width:16%;background:#0097A7;">২</div></div>
+          <div class="age-count">২</div>
+        </div>
+      </div>
+
+      <!-- PARTY BREAKDOWN -->
+      <div class="chart-card">
+        <div class="chart-title">🏛️ দলীয় প্রতিনিধিত্ব</div>
+        <div style="margin-bottom: 16px;">
+          <div class="age-group">
+            <div class="age-label">বিএনপি</div>
+            <div class="age-bar-wrap"><div class="age-bar" style="width:88%;background:#006633;">৪৩</div></div>
+            <div class="age-count">৪৩</div>
+          </div>
+          <div class="age-group">
+            <div class="age-label">টেকনো.</div>
+            <div class="age-bar-wrap"><div class="age-bar" style="width:24%;background:#F9A825;">৩</div></div>
+            <div class="age-count">৩</div>
+          </div>
+          <div class="age-group">
+            <div class="age-label">জোট</div>
+            <div class="age-bar-wrap"><div class="age-bar" style="width:24%;background:#0097A7;">৩</div></div>
+            <div class="age-count">৩</div>
+          </div>
+        </div>
+        <div style="font-size: 12px; color: #666; line-height: 1.8; border-top: 1px solid #eee; padding-top: 14px;">
+          <div>🟢 <strong>গণসংহতি আন্দোলন:</strong> মো. জোনায়েদ সাকি</div>
+          <div>🔵 <strong>গণঅধিকার পরিষদ:</strong> নুরুল হক নুর</div>
+          <div>🟡 <strong>এনডিএম:</strong> ববি হাজ্জাজ</div>
+        </div>
+      </div>
+
+      <!-- GENDER -->
+      <div class="chart-card">
+        <div class="chart-title">👤 লিঙ্গ বৈচিত্র্য</div>
+        <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+          <svg width="150" height="150" viewBox="0 0 150 150">
+            <circle cx="75" cy="75" r="60" fill="none" stroke="#e0e0e0" stroke-width="22"/>
+            <circle cx="75" cy="75" r="60" fill="none" stroke="#1976D2" stroke-width="22"
+              stroke-dasharray="338 38" stroke-dashoffset="95" stroke-linecap="round"/>
+            <circle cx="75" cy="75" r="60" fill="none" stroke="#E91E63" stroke-width="22"
+              stroke-dasharray="38 338" stroke-dashoffset="-243" stroke-linecap="round"/>
+            <text x="75" y="68" text-anchor="middle" font-size="22" font-weight="900" font-family="Exo 2" fill="#1a1a2e">৪৭</text>
+            <text x="75" y="86" text-anchor="middle" font-size="11" fill="#666">জন পুরুষ</text>
+          </svg>
+        </div>
+        <div class="pie-legend">
+          <div class="pie-item"><div class="pie-dot" style="background:#1976D2"></div><strong>৪৭ জন</strong> পুরুষ মন্ত্রী</div>
+          <div class="pie-item"><div class="pie-dot" style="background:#E91E63"></div><strong>২ জন</strong> নারী মন্ত্রী</div>
+        </div>
+        <div style="font-size: 11px; color: #999; margin-top: 12px; line-height: 1.6;">
+          আফরোজা খানম রিতা (বিমান ও পর্যটন)<br>
+          ফারজানা শারমিন পুতুল (মহিলা ও শিশু)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TOP VOTE GETTERS -->
+  <div class="section section-alt">
+    <div class="section-title">নির্বাচনী পরিসংখ্যান</div>
+    <div class="section-heading">সর্বোচ্চ ভোটপ্রাপ্ত মন্ত্রীরা</div>
+    <div class="vote-champions">
+      <div class="vote-champ" style="background: linear-gradient(135deg, #1B5E20, #2E7D32);">
+        <div class="vc-rank">🥇 সর্বোচ্চ</div>
+        <div class="vc-num">২,৩৮,৮৩৬</div>
+        <div class="vc-name">মির্জা ফখরুল ইসলাম</div>
+        <div class="vc-seat">ঠাকুরগাঁও-১</div>
+      </div>
+      <div class="vote-champ" style="background: linear-gradient(135deg, #1565C0, #1976D2);">
+        <div class="vc-rank">🥈 দ্বিতীয়</div>
+        <div class="vc-num">২,২২,০১৯</div>
+        <div class="vc-name">সালাহউদ্দিন আহমদ</div>
+        <div class="vc-seat">কক্সবাজার-১</div>
+      </div>
+      <div class="vote-champ" style="background: linear-gradient(135deg, #6A1B9A, #8E24AA);">
+        <div class="vc-rank">🥉 তৃতীয়</div>
+        <div class="vc-num">২,০৫,১১৮</div>
+        <div class="vc-name">এ জেড এম জাহিদ হোসেন</div>
+        <div class="vc-seat">দিনাজপুর-৬</div>
+      </div>
+      <div class="vote-champ" style="background: linear-gradient(135deg, #BF360C, #E64A19);">
+        <div class="vc-rank">৪র্থ স্থান</div>
+        <div class="vc-num">১,৯৫,৬০০</div>
+        <div class="vc-name">কাজী কায়কোবাদ</div>
+        <div class="vc-seat">কুমিল্লা-৩</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FULL MINISTERS GRID -->
+  <div class="section">
+    <div class="section-title">পূর্ণাঙ্গ তালিকা</div>
+    <div class="section-heading">পূর্ণমন্ত্রী (২৫ জন)</div>
+    <div class="ministers-grid">
+
+      <!-- Card 1: Fakrul -->
+      <div class="minister-card c0">
+        <div class="mc-header">
+          <div class="mc-num">২</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">মির্জা ফখরুল ইসলাম আলমগীর</div>
+            <div class="mc-post">স্থানীয় সরকার, পল্লী উন্নয়ন ও সমবায়</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">২৬ জান ১৯৪৮ · ঠাকুরগাঁও</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭৮ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঠাকুরগাঁও-১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num c0" style="color:#00695C">২,৩৮,৮৩৬</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Card 2: Amir Khosru -->
+      <div class="minister-card c1">
+        <div class="mc-header">
+          <div class="mc-num">৩</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">আমীর খসরু মাহমুদ চৌধুরী</div>
+            <div class="mc-post">অর্থ মন্ত্রণালয় ও পরিকল্পনা মন্ত্রণালয়</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১০ নভে ১৯৪৯ · চট্টগ্রাম</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭৬ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">চট্টগ্রাম-১১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#1565C0">১,১৫,০২১</div><div class="mc-votes-label">ভোট প্রাপ্ত (জামায়াত: ৭৩,৭৫২)</div></div>
+        </div>
+      </div>
+
+      <!-- Card 3: Salahuuddin -->
+      <div class="minister-card c3">
+        <div class="mc-header">
+          <div class="mc-num">৪</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">সালাহউদ্দিন আহমদ</div>
+            <div class="mc-post">স্বরাষ্ট্র মন্ত্রণালয়</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৬২ · কক্সবাজার</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৪ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">কক্সবাজার-১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#C62828">২,২২,০১৯</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Card 4: Tuku -->
+      <div class="minister-card c2">
+        <div class="mc-header">
+          <div class="mc-num">৫</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">ইকবাল হাসান মাহমুদ টুকু</div>
+            <div class="mc-post">বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৪৯ · সিরাজগঞ্জ</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭৭ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">সিরাজগঞ্জ-২</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#6A1B9A">১,৭৭,৫৭৮</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Card 5: Hafiz -->
+      <div class="minister-card c4">
+        <div class="mc-header">
+          <div class="mc-num">৬</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">হাফিজ উদ্দিন আহমেদ</div>
+            <div class="mc-post">মুক্তিযুদ্ধ বিষয়ক মন্ত্রণালয়</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৪৪ · ভোলা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৮২ বছর <span style="color:var(--red);font-size:10px">(সিনিয়রমোস্ট)</span></span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ভোলা-৩</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#E65100">১,৫১,৭৭৪</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Card 6: Zahid -->
+      <div class="minister-card c6">
+        <div class="mc-header">
+          <div class="mc-num">৭</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">এ জেড এম জাহিদ হোসেন</div>
+            <div class="mc-post">মহিলা ও শিশু বিষয়ক · সমাজকল্যাণ</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৫৮ · দিনাজপুর</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৮ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">দিনাজপুর-৬</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#1B5E20">২,০৫,১১৮</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Card 7: Khalilur (Technocrat) -->
+      <div class="minister-card c7">
+        <div class="mc-header">
+          <div class="mc-num">৮</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">খলিলুর রহমান</div>
+            <div class="mc-post">পররাষ্ট্র মন্ত্রণালয়</div>
+            <span class="tech-badge">TECHNOCRAT</span>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৫৫ · ঢাকা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭১ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">পরিচয়</span><span class="mc-row-val">সাবেক নিরাপত্তা উপদেষ্টা</span></div>
+          <div class="mc-votes" style="background: #FFF8E1;"><div class="mc-votes-num" style="color:#E65100">টেকনোক্র্যাট</div><div class="mc-votes-label">কোটায় নিয়োগ</div></div>
+        </div>
+      </div>
+
+      <!-- Card 8: Minto -->
+      <div class="minister-card c8">
+        <div class="mc-header">
+          <div class="mc-num">৯</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">আবদুল আউয়াল মিন্টু</div>
+            <div class="mc-post">পরিবেশ, বন ও জলবায়ু পরিবর্তন</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৪৯ · ফেনী</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭৭ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ফেনী-৩</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#4527A0">১,১০,৫০০</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Card 9: Kaikobad -->
+      <div class="minister-card c9">
+        <div class="mc-header">
+          <div class="mc-num">১০</div>
+          <div class="mc-name-wrap">
+            <div class="mc-name">কাজী শাহ মোফাজ্জল কায়কোবাদ</div>
+            <div class="mc-post">ধর্ম বিষয়ক মন্ত্রণালয়</div>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জন্ম</span><span class="mc-row-val">১৯৫৬ · কুমিল্লা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭০ বছর</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">কুমিল্লা-৩</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#004D40">১,৯৫,৬০০</div><div class="mc-votes-label">ভোট প্রাপ্ত</div></div>
+        </div>
+      </div>
+
+      <!-- Cards 10-25 condensed -->
+      <div class="minister-card c0">
+        <div class="mc-header"><div class="mc-num">১১</div>
+          <div class="mc-name-wrap"><div class="mc-name">মিজানুর রহমান মিনু</div><div class="mc-post">ভূমি মন্ত্রণালয়</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">রাজশাহী</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭৫ বছর (জন্ম ১৯৫১)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">রাজশাহী-২</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#00695C">১,০৫,০০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c1">
+        <div class="mc-header"><div class="mc-num">১২</div>
+          <div class="mc-name-wrap"><div class="mc-name">নিতাই রায় চৌধুরী</div><div class="mc-post">সংস্কৃতি বিষয়ক মন্ত্রণালয়</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">মাগুরা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭৭ বছর (জন্ম ১৯৪৯)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">মাগুরা-২</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#1565C0">১,৪৭,৮৯৬</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c2">
+        <div class="mc-header"><div class="mc-num">১৩</div>
+          <div class="mc-name-wrap"><div class="mc-name">খন্দকার আবদুল মুক্তাদির</div><div class="mc-post">বাণিজ্য · শিল্প · বস্ত্র ও পাট</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">সিলেট</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬০ বছর (জন্ম ১৯৬৬)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">সিলেট-১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#6A1B9A">১,৬৫,৪০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c3">
+        <div class="mc-header"><div class="mc-num">১৪</div>
+          <div class="mc-name-wrap"><div class="mc-name">আরিফুল হক চৌধুরী</div><div class="mc-post">শ্রম · কর্মসংস্থান · প্রবাসী কল্যাণ</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">সিলেট</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৭ বছর (জন্ম ১৯৫৯)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">সিলেট-৪</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#C62828">১,১২,৩০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c4">
+        <div class="mc-header"><div class="mc-num">১৫</div>
+          <div class="mc-name-wrap"><div class="mc-name">জহির উদ্দিন স্বপন</div><div class="mc-post">তথ্য ও সম্প্রচার মন্ত্রণালয়</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">বরিশাল</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৫ বছর (জন্ম ১৯৬১)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">বরিশাল-১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#E65100">৯৮,৭০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c5">
+        <div class="mc-header"><div class="mc-num">১৬</div>
+          <div class="mc-name-wrap"><div class="mc-name">আমিন উর রশিদ</div><div class="mc-post">কৃষি · মৎস্য · খাদ্য</div>
+          <span class="tech-badge">TECHNOCRAT</span>
+          </div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">পাবনা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৪ বছর (জন্ম ১৯৬২)</span></div>
+          <div class="mc-row"><span class="mc-row-label">পরিচয়</span><span class="mc-row-val">কৃষি বিশেষজ্ঞ</span></div>
+          <div class="mc-votes" style="background:#FFF8E1"><div class="mc-votes-num" style="color:#E65100">টেকনোক্র্যাট</div><div class="mc-votes-label">কোটায় নিয়োগ</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c6">
+        <div class="mc-header"><div class="mc-num">১৭</div>
+          <div class="mc-name-wrap"><div class="mc-name">আফরোজা খানম রিতা</div><div class="mc-post">বেসামরিক বিমান ও পর্যটন</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">মানিকগঞ্জ</span></div>
+          <div class="mc-row"><span class="mc-row-label">বিশেষত্ব</span><span class="mc-row-val" style="color:var(--pink)">নারী মন্ত্রী 👩</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">মানিকগঞ্জ-৩</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#1B5E20">১,০২,৫০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c7">
+        <div class="mc-header"><div class="mc-num">১৮</div>
+          <div class="mc-name-wrap"><div class="mc-name">শহীদ উদ্দিন চৌধুরী এ্যানি</div><div class="mc-post">পানি সম্পদ মন্ত্রণালয়</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">লক্ষ্মীপুর</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৭ বছর (জন্ম ১৯৬৯)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">লক্ষ্মীপুর-৩</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#880E4F">১,৩০,৮০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c8">
+        <div class="mc-header"><div class="mc-num">১৯</div>
+          <div class="mc-name-wrap"><div class="mc-name">আসাদুল হাবীব দুলু</div><div class="mc-post">দুর্যোগ ব্যবস্থাপনা ও ত্রাণ</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">লালমনিরহাট</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">লালমনিরহাট-৩</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#4527A0">৮৯,৭০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c9">
+        <div class="mc-header"><div class="mc-num">২০</div>
+          <div class="mc-name-wrap"><div class="mc-name">মো. আসাদুজ্জামান</div><div class="mc-post">আইন, বিচার ও সংসদ</div>
+          <span class="tech-badge">TECHNOCRAT</span></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">ঢাকা</span></div>
+          <div class="mc-row"><span class="mc-row-label">পরিচয়</span><span class="mc-row-val">সুপ্রিম কোর্ট আইনজীবী</span></div>
+          <div class="mc-votes" style="background:#FFF8E1"><div class="mc-votes-num" style="color:#E65100">টেকনোক্র্যাট</div><div class="mc-votes-label">কোটায় নিয়োগ</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c0">
+        <div class="mc-header"><div class="mc-num">২১</div>
+          <div class="mc-name-wrap"><div class="mc-name">জাকারিয়া তাহের সুমন</div><div class="mc-post">গৃহায়ন ও গণপূর্ত মন্ত্রণালয়</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">কুমিল্লা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৫ বছর (জন্ম ১৯৭১)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">কুমিল্লা-৮</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#00695C">১,০৫,২০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c1">
+        <div class="mc-header"><div class="mc-num">২২</div>
+          <div class="mc-name-wrap"><div class="mc-name">দীপেন দেওয়ান</div><div class="mc-post">পার্বত্য চট্টগ্রাম বিষয়ক</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">রাঙামাটি</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">রাঙামাটি</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#1565C0">৮২,৪০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c2">
+        <div class="mc-header"><div class="mc-num">২৩</div>
+          <div class="mc-name-wrap"><div class="mc-name">আ ন ম এহসানুল হক মিলন</div><div class="mc-post">শিক্ষা · প্রাথমিক গণশিক্ষা</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">চাঁদপুর</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৯ বছর (জন্ম ১৯৫৭)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">চাঁদপুর-১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#6A1B9A">১,৪৮,৯০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c3">
+        <div class="mc-header"><div class="mc-num">২৪</div>
+          <div class="mc-name-wrap"><div class="mc-name">সরদার মো. সাখাওয়াত হোসেন</div><div class="mc-post">স্বাস্থ্য ও পরিবার কল্যাণ</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">নরসিংদী</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৭০ বছর (জন্ম ১৯৫৬)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">নরসিংদী-৪</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#C62828">১,০৮,৭০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c4">
+        <div class="mc-header"><div class="mc-num">২৫</div>
+          <div class="mc-name-wrap"><div class="mc-name">ফকির মাহবুব আনাম</div><div class="mc-post">ডাক · টেলিযোগাযোগ · তথ্যপ্রযুক্তি · বিজ্ঞান</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">টাঙ্গাইল</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">টাঙ্গাইল-১</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#E65100">১,১২,৫০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card c5">
+        <div class="mc-header"><div class="mc-num">২৬</div>
+          <div class="mc-name-wrap"><div class="mc-name">শেখ রবিউল আলম</div><div class="mc-post">সড়ক · সেতু · রেলপথ · নৌ পরিবহন</div></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">জেলা</span><span class="mc-row-val">ঢাকা</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৩ বছর (জন্ম ১৯৭৩)</span></div>
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঢাকা-১০</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#00695C">৮০,৯০০</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STATE MINISTERS -->
+  <div class="section section-alt">
+    <div class="section-title">উপমন্ত্রী স্তর</div>
+    <div class="section-heading">প্রতিমন্ত্রী (২৪ জন)</div>
+    <div class="ministers-grid">
+
+      <div class="minister-card state-card c6">
+        <div class="mc-header"><div class="mc-num">২৭</div>
+          <div class="mc-name-wrap"><div class="mc-name">এম রাশিদুজ্জামান মিল্লাত</div><div class="mc-post">বেসামরিক বিমান ও পর্যটন</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">জামালপুর-১</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬০ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c7">
+        <div class="mc-header"><div class="mc-num">২৮</div>
+          <div class="mc-name-wrap"><div class="mc-name">অনিন্দ্য ইসলাম অমিত</div><div class="mc-post">বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">যশোর-৩</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৪৫ বছর</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#880E4F">১,৭৩,০২৩</div><div class="mc-votes-label">ভোট (৭,৮৯৪ ব্যবধানে জয়)</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c8">
+        <div class="mc-header"><div class="mc-num">২৯</div>
+          <div class="mc-name-wrap"><div class="mc-name">শরীফুল আলম</div><div class="mc-post">বাণিজ্য · শিল্প · বস্ত্র ও পাট</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">কিশোরগঞ্জ-৬</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫২ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c9">
+        <div class="mc-header"><div class="mc-num">৩০</div>
+          <div class="mc-name-wrap"><div class="mc-name">শামা ওবায়েদ ইসলাম</div><div class="mc-post">পররাষ্ট্র মন্ত্রণালয়</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ফরিদপুর-২</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫২ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c0">
+        <div class="mc-header"><div class="mc-num">৩১</div>
+          <div class="mc-name-wrap"><div class="mc-name">সুলতান সালাহউদ্দিন টুকু</div><div class="mc-post">কৃষি · মৎস্য · খাদ্য</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">টাঙ্গাইল-২</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৪ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c1">
+        <div class="mc-header"><div class="mc-num">৩২</div>
+          <div class="mc-name-wrap"><div class="mc-name">ব্যারিস্টার কায়সার কামাল</div><div class="mc-post">ভূমি মন্ত্রণালয়</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">নেত্রকোণা-১</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫১ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c2">
+        <div class="mc-header"><div class="mc-num">৩৩</div>
+          <div class="mc-name-wrap"><div class="mc-name">ফরহাদ হোসেন আজাদ</div><div class="mc-post">পানি সম্পদ মন্ত্রণালয়</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">পঞ্চগড়-২</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৫ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c3">
+        <div class="mc-header"><div class="mc-num">৩৪</div>
+          <div class="mc-name-wrap"><div class="mc-name">মো. আমিনুল হক</div><div class="mc-post">যুব ও ক্রীড়া মন্ত্রণালয়</div>
+          <span class="tech-badge">TECHNOCRAT</span></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">পরিচয়</span><span class="mc-row-val">বিখ্যাত ফুটবলার</span></div>
+          <div class="mc-votes" style="background:#FFF8E1"><div class="mc-votes-num" style="color:#E65100">টেকনোক্র্যাট</div><div class="mc-votes-label">কোটায় নিয়োগ</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c4">
+        <div class="mc-header"><div class="mc-num">৩৫</div>
+          <div class="mc-name-wrap"><div class="mc-name">মীর মোহাম্মদ হেলাল উদ্দিন</div><div class="mc-post">পার্বত্য চট্টগ্রাম বিষয়ক</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">চট্টগ্রাম-৫</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৪২ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c5">
+        <div class="mc-header"><div class="mc-num">৩৬</div>
+          <div class="mc-name-wrap"><div class="mc-name">মো. আব্দুল বারী</div><div class="mc-post">জনপ্রশাসন মন্ত্রণালয়</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">দিনাজপুর-৪</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৮ বছর</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#00695C">১,৫৭,১২৭</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c6">
+        <div class="mc-header"><div class="mc-num">৩৭</div>
+          <div class="mc-name-wrap"><div class="mc-name">মীর শাহে আলম</div><div class="mc-post">স্থানীয় সরকার, পল্লী উন্নয়ন</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">বরিশাল-২</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৫ বছর</span></div>
+          <div class="mc-votes"><div class="mc-votes-num" style="color:#1B5E20">১,৪৫,১৩৭</div><div class="mc-votes-label">ভোট</div></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c7">
+        <div class="mc-header"><div class="mc-num">৩৮</div>
+          <div class="mc-name-wrap"><div class="mc-name">মো. জোনায়েদ সাকি</div><div class="mc-post">অর্থ · পরিকল্পনা · স্বরাষ্ট্র</div>
+          <span class="coalition-badge">গণসংহতি</span></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঢাকা-১১</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c8">
+        <div class="mc-header"><div class="mc-num">৩৯</div>
+          <div class="mc-name-wrap"><div class="mc-name">ইশরাক হোসেন</div><div class="mc-post">মুক্তিযুদ্ধ বিষয়ক মন্ত্রণালয়</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঢাকা-৬</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৩৮ বছর <span style="color:var(--green);font-size:10px">(তরুণতম)</span></span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c9">
+        <div class="mc-header"><div class="mc-num">৪০</div>
+          <div class="mc-name-wrap"><div class="mc-name">ফারজানা শারমিন পুতুল</div><div class="mc-post">মহিলা ও শিশু · সমাজকল্যাণ</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">নাটোর-১</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৪৬ বছর 👩</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c0">
+        <div class="mc-header"><div class="mc-num">৪১</div>
+          <div class="mc-name-wrap"><div class="mc-name">শেখ ফরিদুল ইসলাম</div><div class="mc-post">পরিবেশ · ধর্ম · আইন ও বিচার</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">বাগেরহাট-৩</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৪ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c1">
+        <div class="mc-header"><div class="mc-num">৪২</div>
+          <div class="mc-name-wrap"><div class="mc-name">নুরুল হক নুর</div><div class="mc-post">শ্রম · প্রবাসী কল্যাণ</div>
+          <span class="coalition-badge">গণঅধিকার</span></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">পটুয়াখালী-৩</span></div>
+          <div class="mc-row"><span class="mc-row-label">পরিচয়</span><span class="mc-row-val">সাবেক ডাকসু ভিপি</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c2">
+        <div class="mc-header"><div class="mc-num">৪৩</div>
+          <div class="mc-name-wrap"><div class="mc-name">ইয়াসের খান চৌধুরী</div><div class="mc-post">তথ্য ও সম্প্রচার</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">কুষ্টিয়া-১</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৩৯ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c3">
+        <div class="mc-header"><div class="mc-num">৪৪</div>
+          <div class="mc-name-wrap"><div class="mc-name">এম ইকবাল হোসেন</div><div class="mc-post">দুর্যোগ ব্যবস্থাপনা ও ত্রাণ</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ব্রাহ্মণবাড়িয়া-৫</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫৬ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c4">
+        <div class="mc-header"><div class="mc-num">৪৫</div>
+          <div class="mc-name-wrap"><div class="mc-name">এম এ মুহিত</div><div class="mc-post">স্বাস্থ্য · তথ্যপ্রযুক্তি · বিজ্ঞান</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">হবিগঞ্জ-৩</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৫০ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c5">
+        <div class="mc-header"><div class="mc-num">৪৬</div>
+          <div class="mc-name-wrap"><div class="mc-name">আহমেদ সোহেল মঞ্জুর</div><div class="mc-post">গৃহায়ন ও গণপূর্ত</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঢাকা-১৫</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৪৫ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c6">
+        <div class="mc-header"><div class="mc-num">৪৭</div>
+          <div class="mc-name-wrap"><div class="mc-name">ববি হাজ্জাজ</div><div class="mc-post">শিক্ষা · প্রাথমিক গণশিক্ষা</div>
+          <span class="coalition-badge">এনডিএম</span></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঢাকা-১৩</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c7">
+        <div class="mc-header"><div class="mc-num">৪৮</div>
+          <div class="mc-name-wrap"><div class="mc-name">আলী নেওয়াজ খৈয়াম</div><div class="mc-post">সংস্কৃতি বিষয়ক মন্ত্রণালয়</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">রাজবাড়ী-১</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৬৬ বছর</span></div>
+        </div>
+      </div>
+
+      <div class="minister-card state-card c8">
+        <div class="mc-header"><div class="mc-num">৪৯</div>
+          <div class="mc-name-wrap"><div class="mc-name">হাবিবুর রশিদ হাবিব</div><div class="mc-post">সড়ক পরিবহন ও সেতু</div></div></div>
+        <div class="mc-body">
+          <div class="mc-row"><span class="mc-row-label">আসন</span><span class="mc-row-val">ঢাকা-৯</span></div>
+          <div class="mc-row"><span class="mc-row-label">বয়স</span><span class="mc-row-val">৪৮ বছর</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="divider"></div>
+  <div class="footer">
+    <div class="footer-left">ত্রয়োদশ জাতীয় সংসদ নির্বাচন · শপথ: ১৭ ফেব্রুয়ারি ২০২৬ · গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</div>
+    <div class="footer-right">
+      <span class="footer-tag ft-green">BNP সরকার</span>
+      <span class="footer-tag ft-gold">২০২৬-৩১</span>
+      <span class="footer-tag ft-red">৪৯ সদস্য</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
